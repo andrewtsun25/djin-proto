@@ -9,11 +9,5 @@ bazel-*
 .DS_Store
 
 # Yarn (see https://yarnpkg.com/getting-started/qa)
-.yarn/*
-!.yarn/cache
-!.yarn/patches
-!.yarn/plugins
-!.yarn/releases
-!.yarn/sdks
-!.yarn/versions
 yarn-error.log
+node_modules

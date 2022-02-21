@@ -52,8 +52,10 @@ rules_proto_grpc_js_repos()
 
 load("@build_bazel_rules_nodejs//:index.bzl", "yarn_install")
 
+# Note: Requires using yarn classic. Do not upgrade to Yarn 2.
 yarn_install(
     name = "npm",
     package_json = "//:package.json",
+    quiet = False,
     yarn_lock = "//:yarn.lock",
 )
