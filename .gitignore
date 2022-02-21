@@ -1,0 +1,9 @@
+# Bazel
+bazel-*
+
+# IntelliJ
+.idea/
+*.iml
+
+# Mac
+.DS_Store
