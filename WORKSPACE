@@ -1,3 +1,4 @@
+# General installation (see https://rules-proto-grpc.com/en/latest/index.html)
 load("@bazel_tools//tools/build_defs/repo:http.bzl", "http_archive")
 
 http_archive(
@@ -19,7 +20,7 @@ rules_proto_dependencies()
 
 rules_proto_toolchains()
 
-# Go-Specific Installation
+# Go-Specific Installation (see https://rules-proto-grpc.com/en/latest/lang/go.html)
 
 load("@rules_proto_grpc//:repositories.bzl", "bazel_gazelle", "io_bazel_rules_go")  # buildifier: disable=same-origin-load
 
@@ -42,3 +43,19 @@ rules_proto_grpc_go_repos()
 load("@bazel_gazelle//:deps.bzl", "gazelle_dependencies")
 
 gazelle_dependencies()
+
+# TypeScript-dependent installation (see https://rules-proto-grpc.com/en/latest/lang/js.html#js-grpc-web-library)
+
+load("@rules_proto_grpc//js:repositories.bzl", rules_proto_grpc_js_repos = "js_repos")
+
+rules_proto_grpc_js_repos()
+
+load("@build_bazel_rules_nodejs//:index.bzl", "yarn_install")
+
+# Note: Requires using yarn classic. Do not upgrade to Yarn 2.
+yarn_install(
+    name = "npm",
+    package_json = "//:package.json",
+    quiet = False,
+    yarn_lock = "//:yarn.lock",
+)

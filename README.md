@@ -20,8 +20,17 @@ bazel run ://djin-go-proto
 
 ### Build client TypeScript stubs
 ```
-bazel run ://djin-go-proto
+bazel run ://djin-ts-proto
 ```
 
+### Yarn Usage
+Yarn is used to manage dependencies required to generate TypeScript/JavaScript output. However, 
+rather than invoking yarn directly, 
+[Bazel-managed yarn](https://bazelbuild.github.io/rules_nodejs/dependencies.html) is being used. 
+Yarn will need to be invoked in the following manner:
+```
+bazel run @yarn//:yarn -- <arguments passed to yarn>
+```
+Arguments to be passed into Yarn can be found in 
 
 
