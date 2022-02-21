@@ -8,7 +8,7 @@ bazel-*
 # Mac
 .DS_Store
 
-# Yarn
+# Yarn (see https://yarnpkg.com/getting-started/qa)
 .yarn/*
 !.yarn/cache
 !.yarn/patches
@@ -16,3 +16,4 @@ bazel-*
 !.yarn/releases
 !.yarn/sdks
 !.yarn/versions
+yarn-error.log
