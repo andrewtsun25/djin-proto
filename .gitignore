@@ -1,7 +1,7 @@
 # Bazel
 bazel-*
 
-# IntelliJ
+# JetBrains IDEs
 .idea/
 *.iml
 
