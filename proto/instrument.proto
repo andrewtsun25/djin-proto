@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+option go_package = "github.com/andrewtsun25/djin-proto/proto";
+
+package dev.djin.proto;
+
+message Instrument {
+    string id = 1;
+    string mediaUrl = 2;
+    string name = 3;
+}

@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+option go_package = "github.com/andrewtsun25/djin-proto/proto";
+
+package dev.djin.proto;
+
+import 'google/protobuf/timestamp.proto';
+import "proto/organization.proto";
+
+message HbvResearchPaper {
+  string id = 1;
+  string name = 2;
+  Organization organization = 3;
+  string mediaUrl = 4;
+  google.protobuf.Timestamp startDate = 5;
+  google.protobuf.Timestamp endDate = 6;
+  string paperUrl = 7;
+  string description = 8;
+  repeated string responsibilities = 9;
+  repeated string skills = 10;
+}

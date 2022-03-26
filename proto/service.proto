@@ -4,10 +4,37 @@ option go_package = "github.com/andrewtsun25/djin-proto/proto";
 
 package dev.djin.proto;
 
-import "proto/organization.proto";
+import "proto/education.rpc.proto";
+import "proto/employment.rpc.proto";
+import "proto/hbvResearchPaper.rpc.proto";
+import "proto/holisticOfficeLink.rpc.proto";
+import "proto/holisticOfficeModule.rpc.proto";
+import "proto/instrument.rpc.proto";
+import "proto/martialArtsStyle.rpc.proto";
+import "proto/musicScore.rpc.proto";
+import "proto/project.rpc.proto";
 import "proto/organization.rpc.proto";
 
 service DjinService {
-  rpc ListOrganizations(ListOrganizationsRequest) returns(ListOrganizationsResponse) {}
+  // Educations
+  rpc ListEducationsByType(ListEducationsByTypeRequest) returns (ListEducationsByTypeResponse) {}
+  // Employments
+  rpc ListEmployments(ListEmploymentsRequest) returns (ListEmploymentsResponse) {}
+  // HBV Research Papers
+  rpc ListHBVResearchPapers(ListHbvResearchPapersRequest) returns (ListHbvResearchPapersResponse) {}
+  // Holistic Office
+  rpc ListHolisticOfficeLinks(ListHolisticOfficeLinksRequest) returns
+      (ListHolisticOfficeLinksResponse) {}
+  rpc ListHolisticOfficeModules(ListHolisticOfficeModulesRequest) returns
+      (ListHolisticOfficeModulesResponse) {}
+  // Martial Arts
+  rpc GetMartialArtsStyleById(GetMartialArtsStyleByIdRequest) returns
+      (GetMartialArtsStyleByIdResponse) {}
+  // Music
+  rpc ListInstruments(ListInstrumentsRequest) returns (ListInstrumentsResponse) {}
+  rpc ListMusicScores(ListMusicScoresRequest) returns (ListMusicScoresResponse) {}
+  // Projects
+  rpc ListProjects(ListProjectsRequest) returns (ListProjectsResponse) {}
+  // Organizations
   rpc GetOrganizationById(GetOrganizationByIdRequest) returns (GetOrganizationByIdResponse) {}
 }

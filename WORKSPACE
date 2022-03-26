@@ -50,12 +50,25 @@ load("@rules_proto_grpc//js:repositories.bzl", rules_proto_grpc_js_repos = "js_r
 
 rules_proto_grpc_js_repos()
 
-load("@build_bazel_rules_nodejs//:index.bzl", "yarn_install")
+# Note: Requires using yarn classic. Do not upgrade to Yarn 2. (Bazel-managed Yarn, see
+# https://bazelbuild.github.io/rules_nodejs/dependencies.html)
 
-# Note: Requires using yarn classic. Do not upgrade to Yarn 2.
+http_archive(
+    name = "build_bazel_rules_nodejs",
+    sha256 = "3ceb1e5b5dcad5fa2ad8870a20201cfbb9c9c63cac4055c9ab370034c765297f",
+    urls = ["https://github.com/bazelbuild/rules_nodejs/releases/download/5.3.0/rules_nodejs-5.3.0.tar.gz"],
+)
+
+load("@build_bazel_rules_nodejs//:repositories.bzl", "build_bazel_rules_nodejs_dependencies")
+
+build_bazel_rules_nodejs_dependencies()
+
+load("@build_bazel_rules_nodejs//:index.bzl", "node_repositories", "yarn_install")
+
+node_repositories()
+
 yarn_install(
     name = "npm",
     package_json = "//:package.json",
-    quiet = False,
     yarn_lock = "//:yarn.lock",
 )

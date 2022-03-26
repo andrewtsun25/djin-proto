@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+option go_package = "github.com/andrewtsun25/djin-proto/proto";
+
+package dev.djin.proto;
+
+import "google/protobuf/timestamp.proto";
+
+message MusicScore {
+    string id = 1;
+    google.protobuf.Timestamp date = 2;
+    string name = 3;
+    map<string, string> sections = 4;
+    string trackUrl = 5;
+}
