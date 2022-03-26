@@ -1,19 +1,19 @@
 syntax = "proto3";
 
-option go_package = "github.com/andrewtsun25/djin-proto/proto";
+option go_package = "github.com/andrewtsun25/djin-proto/proto/dev/djin/service/v1";
 
-package dev.djin.proto;
+package dev.djin.proto.service.v1;
 
-import "proto/education.rpc.proto";
-import "proto/employment.rpc.proto";
-import "proto/hbvResearchPaper.rpc.proto";
-import "proto/holisticOfficeLink.rpc.proto";
-import "proto/holisticOfficeModule.rpc.proto";
-import "proto/instrument.rpc.proto";
-import "proto/martialArtsStyle.rpc.proto";
-import "proto/musicScore.rpc.proto";
-import "proto/project.rpc.proto";
-import "proto/organization.rpc.proto";
+import "proto/dev/djin/service/v1/education.rpc.proto";
+import "proto/dev/djin/service/v1/employment.rpc.proto";
+import "proto/dev/djin/service/v1/hbvResearchPaper.rpc.proto";
+import "proto/dev/djin/service/v1/holisticOfficeLink.rpc.proto";
+import "proto/dev/djin/service/v1/holisticOfficeModule.rpc.proto";
+import "proto/dev/djin/service/v1/instrument.rpc.proto";
+import "proto/dev/djin/service/v1/martialArtsStyle.rpc.proto";
+import "proto/dev/djin/service/v1/musicScore.rpc.proto";
+import "proto/dev/djin/service/v1/project.rpc.proto";
+import "proto/dev/djin/service/v1/organization.rpc.proto";
 
 service DjinService {
   // Educations

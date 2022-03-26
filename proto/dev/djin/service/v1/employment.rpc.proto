@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+option go_package = "github.com/andrewtsun25/djin-proto/proto/dev/djin/service/v1";
+
+package dev.djin.proto.service.v1;
+
+import "proto/dev/djin/entity/v1/employment.proto";
+
+message ListEmploymentsRequest {}
+
+message ListEmploymentsResponse {
+  repeated djin.proto.entity.v1.Employment employments = 1;
+}

@@ -1,11 +1,11 @@
 syntax = "proto3";
 
-option go_package = "github.com/andrewtsun25/djin-proto/proto";
+option go_package = "github.com/andrewtsun25/djin-proto/proto/dev/djin/entity/v1";
 
-package dev.djin.proto;
+package dev.djin.proto.entity.v1;
 
 import "google/protobuf/timestamp.proto";
-import "proto/martialArtsStudio.proto";
+import "proto/dev/djin/entity/v1/martialArtsStudio.proto";
 
 message MartialArtsStyle {
     string id = 1;

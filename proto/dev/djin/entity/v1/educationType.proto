@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+option go_package = "github.com/andrewtsun25/djin-proto/proto/dev/djin/entity/v1";
+
+package dev.djin.proto.entity.v1;
+
+enum EducationType {
+    CODING = 0;
+    MUSIC = 1;
+}

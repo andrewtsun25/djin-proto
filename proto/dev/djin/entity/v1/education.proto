@@ -1,14 +1,14 @@
 syntax = "proto3";
 
-option go_package = "github.com/andrewtsun25/djin-proto/proto";
+option go_package = "github.com/andrewtsun25/djin-proto/proto/dev/djin/entity/v1";
 
-package dev.djin.proto;
+package dev.djin.proto.entity.v1;
 
 import "google/protobuf/timestamp.proto";
 import "google/protobuf/wrappers.proto";
-import "proto/educationType.proto";
-import "proto/organization.proto";
-import "proto/studentOrganization.proto";
+import "proto/dev/djin/entity/v1/educationType.proto";
+import "proto/dev/djin/entity/v1/organization.proto";
+import "proto/dev/djin/entity/v1/studentOrganization.proto";
 
 message Education {
     string id = 1;
