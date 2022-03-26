@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+option go_package = "github.com/andrewtsun25/djin-proto/proto";
+
+package dev.djin.proto;
+
+import "proto/holisticOfficeLink.proto";
+
+message ListHolisticOfficeLinksRequest {}
+
+message ListHolisticOfficeLinksResponse {
+  repeated HolisticOfficeLink holisticOfficeLinks = 1;
+}

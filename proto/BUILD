@@ -5,6 +5,10 @@ proto_library(
     srcs = [
         "hbvResearchPaper.proto",
         "hbvResearchPaper.rpc.proto",
+        "holisticOfficeLink.proto",
+        "holisticOfficeLink.rpc.proto",
+        "holisticOfficeModule.proto",
+        "holisticOfficeModule.rpc.proto",
         "organization.proto",
         "organization.rpc.proto",
         "service.proto",
