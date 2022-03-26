@@ -1,3 +1,0 @@
-# Treat releases/plugins as binaries to prevent showing massive diffs on check-in
-/.yarn/releases/** binary
-/.yarn/plugins/** binary
