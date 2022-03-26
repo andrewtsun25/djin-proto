@@ -3,6 +3,11 @@ load("@rules_proto//proto:defs.bzl", "proto_library")
 proto_library(
     name = "djin_proto_lib",
     srcs = [
+        "education.proto",
+        "education.rpc.proto",
+        "educationType.proto",
+        "employment.proto",
+        "employment.rpc.proto",
         "hbvResearchPaper.proto",
         "hbvResearchPaper.rpc.proto",
         "holisticOfficeLink.proto",
@@ -21,6 +26,7 @@ proto_library(
         "project.proto",
         "project.rpc.proto",
         "service.proto",
+        "studentOrganization.proto",
     ],
     visibility = ["//visibility:public"],
     deps = [
