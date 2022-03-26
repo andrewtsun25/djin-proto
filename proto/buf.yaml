@@ -1,0 +1,10 @@
+version: v1
+name: buf.build/andrewtsun25/djin
+deps:
+  - buf.build/googleapis/googleapis
+breaking:
+  use:
+    - FILE
+lint:
+  use:
+    - DEFAULT
