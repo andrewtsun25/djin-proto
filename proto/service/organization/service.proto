@@ -1,0 +1,26 @@
+syntax = "proto3";
+
+option go_package = "github.com/andrewtsun25/djin-proto/proto/service/organization";
+
+package dev.djin.service.organization;
+
+import "proto/entity/organization.proto";
+
+service OrganizationService {
+  rpc ListOrganizations(ListOrganizationsRequest) returns (ListOrganizationsResponse) {}
+  rpc GetOrganizationById(GetOrganizationByIdRequest) returns (GetOrganizationByIdResponse) {}
+}
+
+message ListOrganizationsRequest {}
+
+message ListOrganizationsResponse {
+  repeated dev.djin.entity.Organization organizations = 1;
+}
+
+message GetOrganizationByIdRequest {
+  string id = 1;
+}
+
+message GetOrganizationByIdResponse {
+  dev.djin.entity.Organization organization = 1;
+}

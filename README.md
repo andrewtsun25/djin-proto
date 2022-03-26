@@ -13,14 +13,14 @@ to Google Cloud Artifacts.
 
 ## Frequently Used Commands
 
-### Build server Go stubs
+### Build server-side Go stubs
 ```
-bazel run ://djin-go-proto
+bazel run //:djin-go-proto
 ```
 
-### Build client TypeScript stubs
+### Build client-side TypeScript stubs
 ```
-bazel run ://djin-ts-proto
+bazel run //:djin-ts-proto
 ```
 
 ### Yarn Usage
@@ -31,6 +31,6 @@ Yarn will need to be invoked in the following manner:
 ```
 bazel run @yarn//:yarn -- <arguments passed to yarn>
 ```
-Arguments to be passed into Yarn can be found in 
+Yarn CLI commands can be found [here](https://classic.yarnpkg.com/en/docs/cli/);
 
 

@@ -1,12 +1,12 @@
 load("@rules_proto//proto:defs.bzl", "proto_library")
 
 proto_library(
-    name = "entity_proto",
+    name = "service_proto",
     srcs = [
-        "organization.proto",
+        "service.proto",
     ],
     visibility = ["//visibility:public"],
     deps = [
-        "@com_google_protobuf//:wrappers_proto",
+        "//proto/entity:entity_proto",
     ],
 )
