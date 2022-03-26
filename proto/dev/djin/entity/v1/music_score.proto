@@ -2,7 +2,7 @@ syntax = "proto3";
 
 option go_package = "github.com/andrewtsun25/djin-proto/proto/dev/djin/entity/v1";
 
-package dev.djin.proto.entity.v1;
+package proto.dev.djin.entity.v1;
 
 import "google/protobuf/timestamp.proto";
 
@@ -11,5 +11,5 @@ message MusicScore {
     google.protobuf.Timestamp date = 2;
     string name = 3;
     map<string, string> sections = 4;
-    string trackUrl = 5;
+    string track_url = 5;
 }

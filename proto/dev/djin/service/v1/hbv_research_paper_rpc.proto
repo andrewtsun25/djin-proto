@@ -2,12 +2,12 @@ syntax = "proto3";
 
 option go_package = "github.com/andrewtsun25/djin-proto/proto/dev/djin/service/v1";
 
-package dev.djin.proto.service.v1;
+package proto.dev.djin.service.v1;
 
-import "proto/dev/djin/entity/v1/hbvResearchPaper.proto";
+import "proto/dev/djin/entity/v1/hbv_research_paper.proto";
 
 message ListHbvResearchPapersRequest {}
 
 message ListHbvResearchPapersResponse {
-  repeated djin.proto.entity.v1.HbvResearchPaper hbvResearchPapers = 1;
+    repeated proto.dev.djin.entity.v1.HbvResearchPaper hbv_research_papers = 1;
 }

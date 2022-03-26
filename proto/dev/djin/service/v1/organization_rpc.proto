@@ -2,7 +2,7 @@ syntax = "proto3";
 
 option go_package = "github.com/andrewtsun25/djin-proto/proto/dev/djin/service/v1";
 
-package dev.djin.proto.service.v1;
+package proto.dev.djin.service.v1;
 
 import "proto/dev/djin/entity/v1/organization.proto";
 
@@ -11,5 +11,5 @@ message GetOrganizationByIdRequest {
 }
 
 message GetOrganizationByIdResponse {
-    djin.proto.entity.v1.Organization organization = 1;
+    proto.dev.djin.entity.v1.Organization organization = 1;
 }

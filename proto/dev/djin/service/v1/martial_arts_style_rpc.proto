@@ -2,14 +2,14 @@ syntax = "proto3";
 
 option go_package = "github.com/andrewtsun25/djin-proto/proto/dev/djin/service/v1";
 
-package dev.djin.proto.service.v1;
+package proto.dev.djin.service.v1;
 
-import "proto/dev/djin/entity/v1/martialArtsStyle.proto";
+import "proto/dev/djin/entity/v1/martial_arts_style.proto";
 
 message GetMartialArtsStyleByIdRequest {
     string id = 1;
 }
 
 message GetMartialArtsStyleByIdResponse {
-    djin.proto.entity.v1.MartialArtsStyle martialArtsStyle = 1;
+    proto.dev.djin.entity.v1.MartialArtsStyle martial_arts_style = 1;
 }

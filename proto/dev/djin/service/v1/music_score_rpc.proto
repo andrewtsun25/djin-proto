@@ -2,12 +2,12 @@ syntax = "proto3";
 
 option go_package = "github.com/andrewtsun25/djin-proto/proto/dev/djin/service/v1";
 
-package dev.djin.proto.service.v1;
+package proto.dev.djin.service.v1;
 
-import "proto/dev/djin/entity/v1/musicScore.proto";
+import "proto/dev/djin/entity/v1/music_score.proto";
 
 message ListMusicScoresRequest {}
 
 message ListMusicScoresResponse {
-    repeated  djin.proto.entity.v1.MusicScore musicScores = 1;
+    repeated proto.dev.djin.entity.v1.MusicScore music_scores = 1;
 }

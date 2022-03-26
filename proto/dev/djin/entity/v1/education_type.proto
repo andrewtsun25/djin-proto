@@ -4,8 +4,8 @@ option go_package = "github.com/andrewtsun25/djin-proto/proto/dev/djin/entity/v1
 
 package proto.dev.djin.entity.v1;
 
-message Instrument {
-    string id = 1;
-    string media_url = 2;
-    string name = 3;
+enum EducationType {
+    EDUCATION_TYPE_UNSPECIFIED = 0;
+    EDUCATION_TYPE_CODING = 1;
+    EDUCATION_TYPE_MUSIC = 2;
 }

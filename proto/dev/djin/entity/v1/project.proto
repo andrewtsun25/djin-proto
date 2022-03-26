@@ -2,7 +2,7 @@ syntax = "proto3";
 
 option go_package = "github.com/andrewtsun25/djin-proto/proto/dev/djin/entity/v1";
 
-package dev.djin.proto.entity.v1;
+package proto.dev.djin.entity.v1;
 
 import "google/protobuf/timestamp.proto";
 import "google/protobuf/wrappers.proto";
@@ -11,15 +11,15 @@ import "proto/dev/djin/entity/v1/organization.proto";
 message Project {
     string id = 1;
     string name = 2;
-    google.protobuf.Timestamp startDate = 3;
-    google.protobuf.Timestamp endDate = 4;
-    string mediaUrl = 5;
+    google.protobuf.Timestamp start_date = 3;
+    google.protobuf.Timestamp end_date = 4;
+    string media_url = 5;
     string description = 6;
     repeated string responsibilities = 7;
     Organization organization = 8;
     repeated string skills = 9;
     google.protobuf.StringValue disclaimer = 10;
     repeated string domains = 11;
-    repeated string skillTypes = 12;
-    map<string, string> projectUrls = 13;
+    repeated string skill_types = 12;
+    map<string, string> project_urls = 13;
 }

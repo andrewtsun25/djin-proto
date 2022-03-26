@@ -2,10 +2,12 @@ syntax = "proto3";
 
 option go_package = "github.com/andrewtsun25/djin-proto/proto/dev/djin/entity/v1";
 
-package dev.djin.proto.entity.v1;
+package proto.dev.djin.entity.v1;
 
-message HolisticOfficeModule {
+message MartialArtsStudio {
     string id = 1;
     string name = 2;
-    map<string, string> components = 3;
+    string logo_url = 3;
+    string studio_url = 4;
+    string city = 5;
 }

@@ -2,12 +2,12 @@ syntax = "proto3";
 
 option go_package = "github.com/andrewtsun25/djin-proto/proto/dev/djin/service/v1";
 
-package dev.djin.proto.service.v1;
+package proto.dev.djin.service.v1;
 
 import "proto/dev/djin/entity/v1/project.proto";
 
 message ListProjectsRequest {}
 
 message ListProjectsResponse {
-    repeated djin.proto.entity.v1.Project projects = 1;
+    repeated proto.dev.djin.entity.v1.Project projects = 1;
 }

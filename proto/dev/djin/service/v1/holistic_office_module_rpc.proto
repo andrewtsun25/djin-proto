@@ -2,12 +2,12 @@ syntax = "proto3";
 
 option go_package = "github.com/andrewtsun25/djin-proto/proto/dev/djin/service/v1";
 
-package dev.djin.proto.service.v1;
+package proto.dev.djin.service.v1;
 
-import "proto/dev/djin/entity/v1/holisticOfficeModule.proto";
+import "proto/dev/djin/entity/v1/holistic_office_module.proto";
 
 message ListHolisticOfficeModulesRequest {}
 
 message ListHolisticOfficeModulesResponse {
-  repeated djin.proto.entity.v1.HolisticOfficeModule holisticOfficeModules = 1;
+  repeated proto.dev.djin.entity.v1.HolisticOfficeModule holistic_office_modules = 1;
 }

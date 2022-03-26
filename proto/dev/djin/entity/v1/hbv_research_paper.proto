@@ -2,7 +2,7 @@ syntax = "proto3";
 
 option go_package = "github.com/andrewtsun25/djin-proto/proto/dev/djin/entity/v1";
 
-package dev.djin.proto.entity.v1;
+package proto.dev.djin.entity.v1;
 
 import 'google/protobuf/timestamp.proto';
 import "proto/dev/djin/entity/v1/organization.proto";
@@ -11,10 +11,10 @@ message HbvResearchPaper {
   string id = 1;
   string name = 2;
   Organization organization = 3;
-  string mediaUrl = 4;
-  google.protobuf.Timestamp startDate = 5;
-  google.protobuf.Timestamp endDate = 6;
-  string paperUrl = 7;
+  string media_url = 4;
+  google.protobuf.Timestamp start_date = 5;
+  google.protobuf.Timestamp end_date = 6;
+  string paper_url = 7;
   string description = 8;
   repeated string responsibilities = 9;
   repeated string skills = 10;

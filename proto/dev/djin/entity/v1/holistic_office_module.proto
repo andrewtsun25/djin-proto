@@ -2,11 +2,10 @@ syntax = "proto3";
 
 option go_package = "github.com/andrewtsun25/djin-proto/proto/dev/djin/entity/v1";
 
-package dev.djin.proto.entity.v1;
+package proto.dev.djin.entity.v1;
 
-message StudentOrganization {
+message HolisticOfficeModule {
     string id = 1;
     string name = 2;
-    string description = 3;
-    string biography = 4;
+    map<string, string> components = 3;
 }

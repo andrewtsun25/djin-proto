@@ -1,0 +1,28 @@
+syntax = "proto3";
+
+option go_package = "github.com/andrewtsun25/djin-proto/proto/dev/djin/entity/v1";
+
+package proto.dev.djin.entity.v1;
+
+import "google/protobuf/timestamp.proto";
+import "proto/dev/djin/entity/v1/martial_arts_studio.proto";
+
+message MartialArtsStyle {
+    string id = 1;
+    enum MartialArtsStyleType {
+        MARTIAL_ARTS_STYLE_TYPE_UNSPECIFIED = 0;
+        MARTIAL_ARTS_STYLE_TYPE_WT = 1;
+        MARTIAL_ARTS_STYLE_TYPE_HDGD = 2;
+        MARTIAL_ARTS_STYLE_TYPE_ITF_TKD = 3;
+    }
+    MartialArtsStyleType type = 2;
+    string name = 3;
+    string logo_url = 4;
+    int64 black_belt_rank = 5;
+    string description = 6;
+    repeated string biography_paragraphs = 7;
+    string media_url = 8;
+    string media_caption = 9;
+    repeated MartialArtsStudio studios = 10;
+    google.protobuf.Timestamp join_date = 11;
+}

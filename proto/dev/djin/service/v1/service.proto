@@ -2,18 +2,18 @@ syntax = "proto3";
 
 option go_package = "github.com/andrewtsun25/djin-proto/proto/dev/djin/service/v1";
 
-package dev.djin.proto.service.v1;
+package proto.dev.djin.service.v1;
 
-import "proto/dev/djin/service/v1/education.rpc.proto";
-import "proto/dev/djin/service/v1/employment.rpc.proto";
-import "proto/dev/djin/service/v1/hbvResearchPaper.rpc.proto";
-import "proto/dev/djin/service/v1/holisticOfficeLink.rpc.proto";
-import "proto/dev/djin/service/v1/holisticOfficeModule.rpc.proto";
-import "proto/dev/djin/service/v1/instrument.rpc.proto";
-import "proto/dev/djin/service/v1/martialArtsStyle.rpc.proto";
-import "proto/dev/djin/service/v1/musicScore.rpc.proto";
-import "proto/dev/djin/service/v1/project.rpc.proto";
-import "proto/dev/djin/service/v1/organization.rpc.proto";
+import "proto/dev/djin/service/v1/education_rpc.proto";
+import "proto/dev/djin/service/v1/employment_rpc.proto";
+import "proto/dev/djin/service/v1/hbv_research_paper_rpc.proto";
+import "proto/dev/djin/service/v1/holistic_office_link_rpc.proto";
+import "proto/dev/djin/service/v1/holistic_office_module_rpc.proto";
+import "proto/dev/djin/service/v1/instrument_rpc.proto";
+import "proto/dev/djin/service/v1/martial_arts_style_rpc.proto";
+import "proto/dev/djin/service/v1/music_score_rpc.proto";
+import "proto/dev/djin/service/v1/project_rpc.proto";
+import "proto/dev/djin/service/v1/organization_rpc.proto";
 
 service DjinService {
   // Educations
@@ -21,7 +21,7 @@ service DjinService {
   // Employments
   rpc ListEmployments(ListEmploymentsRequest) returns (ListEmploymentsResponse) {}
   // HBV Research Papers
-  rpc ListHBVResearchPapers(ListHbvResearchPapersRequest) returns (ListHbvResearchPapersResponse) {}
+  rpc ListHbvResearchPapers(ListHbvResearchPapersRequest) returns (ListHbvResearchPapersResponse) {}
   // Holistic Office
   rpc ListHolisticOfficeLinks(ListHolisticOfficeLinksRequest) returns
       (ListHolisticOfficeLinksResponse) {}

@@ -2,15 +2,15 @@ syntax = "proto3";
 
 option go_package = "github.com/andrewtsun25/djin-proto/proto/dev/djin/service/v1";
 
-package dev.djin.proto.service.v1;
+package proto.dev.djin.service.v1;
 
 import "proto/dev/djin/entity/v1/education.proto";
-import "proto/dev/djin/entity/v1/educationType.proto";
+import "proto/dev/djin/entity/v1/education_type.proto";
 
 message ListEducationsByTypeRequest {
-    djin.proto.entity.v1.EducationType educationType = 1;
+    proto.dev.djin.entity.v1.EducationType education_type = 1;
 }
 
 message ListEducationsByTypeResponse {
-    repeated djin.proto.entity.v1.EducationType educations = 1;
+    repeated proto.dev.djin.entity.v1.Education educations = 1;
 }

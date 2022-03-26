@@ -2,13 +2,13 @@ syntax = "proto3";
 
 option go_package = "github.com/andrewtsun25/djin-proto/proto/dev/djin/entity/v1";
 
-package dev.djin.proto.entity.v1;
+package proto.dev.djin.entity.v1;
 
 import "google/protobuf/wrappers.proto";
 
 message Organization {
   string id = 1;
   string name = 2;
-  google.protobuf.StringValue logoUrl = 3;
+  google.protobuf.StringValue logo_url = 3;
 }
 
