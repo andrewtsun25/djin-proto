@@ -4,6 +4,7 @@ option go_package = "github.com/andrewtsun25/djin-proto/proto";
 
 package dev.djin.proto;
 
+import "proto/education.rpc.proto";
 import "proto/employment.rpc.proto";
 import "proto/hbvResearchPaper.rpc.proto";
 import "proto/holisticOfficeLink.rpc.proto";
@@ -15,6 +16,8 @@ import "proto/project.rpc.proto";
 import "proto/organization.rpc.proto";
 
 service DjinService {
+  // Educations
+  rpc ListEducationsByType(ListEducationsByTypeRequest) returns (ListEducationsByTypeResponse) {}
   // Employments
   rpc ListEmployments(ListEmploymentsRequest) returns (ListEmploymentsResponse) {}
   // HBV Research Papers
