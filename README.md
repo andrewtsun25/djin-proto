@@ -15,12 +15,12 @@ to Google Cloud Artifacts.
 
 ### Build server-side Go stubs
 ```
-bazel run //:djin-go-proto
+bazel build //:djin_proto_lib_go
 ```
 
 ### Build client-side TypeScript stubs
 ```
-bazel run //:djin-ts-proto
+bazel build //:djin_proto_lib_ts
 ```
 
 ### Yarn Usage
@@ -31,6 +31,6 @@ Yarn will need to be invoked in the following manner:
 ```
 bazel run @yarn//:yarn -- <arguments passed to yarn>
 ```
-Yarn CLI commands can be found [here](https://classic.yarnpkg.com/en/docs/cli/);
+Yarn CLI commands can be found [here](https://classic.yarnpkg.com/en/docs/cli/).
 
 

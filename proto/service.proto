@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+option go_package = "github.com/andrewtsun25/djin-proto/proto";
+
+package dev.djin.proto;
+
+import "proto/organization.proto";
+import "proto/organization.rpc.proto";
+
+service DjinService {
+  rpc ListOrganizations(ListOrganizationsRequest) returns(ListOrganizationsResponse) {}
+  rpc GetOrganizationById(GetOrganizationByIdRequest) returns (GetOrganizationByIdResponse) {}
+}

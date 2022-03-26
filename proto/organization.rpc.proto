@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+option go_package = "github.com/andrewtsun25/djin-proto/proto";
+
+package dev.djin.proto;
+
+import "proto/organization.proto";
+
+message ListOrganizationsRequest {}
+
+message ListOrganizationsResponse {
+  repeated Organization organizations = 1;
+}
+
+message GetOrganizationByIdRequest {
+  string id = 1;
+}
+
+message GetOrganizationByIdResponse {
+  Organization organization = 1;
+}
