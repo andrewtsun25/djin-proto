@@ -8,6 +8,7 @@ import "proto/hbvResearchPaper.rpc.proto";
 import "proto/holisticOfficeLink.rpc.proto";
 import "proto/holisticOfficeModule.rpc.proto";
 import "proto/martialArtsStyle.rpc.proto";
+import "proto/project.rpc.proto";
 import "proto/organization.rpc.proto";
 
 service DjinService {
@@ -21,6 +22,8 @@ service DjinService {
   // Martial Arts
   rpc GetMartialArtsStyleById(GetMartialArtsStyleByIdRequest) returns
       (GetMartialArtsStyleByIdResponse) {}
+  // Projects
+  rpc ListProjects(ListProjectsRequest) returns (ListProjectsResponse) {}
   // Organizations
   rpc GetOrganizationById(GetOrganizationByIdRequest) returns (GetOrganizationByIdResponse) {}
 }

@@ -14,6 +14,8 @@ proto_library(
         "martialArtsStyle.rpc.proto",
         "organization.proto",
         "organization.rpc.proto",
+        "project.proto",
+        "project.rpc.proto",
         "service.proto",
     ],
     visibility = ["//visibility:public"],
