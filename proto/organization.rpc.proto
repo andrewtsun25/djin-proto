@@ -6,12 +6,6 @@ package dev.djin.proto;
 
 import "proto/organization.proto";
 
-message ListOrganizationsRequest {}
-
-message ListOrganizationsResponse {
-  repeated Organization organizations = 1;
-}
-
 message GetOrganizationByIdRequest {
   string id = 1;
 }

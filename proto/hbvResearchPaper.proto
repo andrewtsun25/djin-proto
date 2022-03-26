@@ -4,8 +4,8 @@ option go_package = "github.com/andrewtsun25/djin-proto/proto";
 
 package dev.djin.proto;
 
-import "proto/organization.proto";
 import 'google/protobuf/timestamp.proto';
+import "proto/organization.proto";
 
 message HbvResearchPaper {
   string id = 1;

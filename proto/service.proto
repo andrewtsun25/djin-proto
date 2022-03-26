@@ -7,6 +7,7 @@ package dev.djin.proto;
 import "proto/hbvResearchPaper.rpc.proto";
 import "proto/holisticOfficeLink.rpc.proto";
 import "proto/holisticOfficeModule.rpc.proto";
+import "proto/martialArtsStyle.rpc.proto";
 import "proto/organization.rpc.proto";
 
 service DjinService {
@@ -17,7 +18,9 @@ service DjinService {
       (ListHolisticOfficeLinksResponse) {}
   rpc ListHolisticOfficeModules(ListHolisticOfficeModulesRequest) returns
       (ListHolisticOfficeModulesResponse) {}
+  // Martial Arts
+  rpc GetMartialArtsStyleById(GetMartialArtsStyleByIdRequest) returns
+      (GetMartialArtsStyleByIdResponse) {}
   // Organizations
-  rpc ListOrganizations(ListOrganizationsRequest) returns (ListOrganizationsResponse) {}
   rpc GetOrganizationById(GetOrganizationByIdRequest) returns (GetOrganizationByIdResponse) {}
 }

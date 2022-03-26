@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+option go_package = "github.com/andrewtsun25/djin-proto/proto";
+
+package dev.djin.proto;
+
+import "proto/martialArtsStyle.proto";
+
+message GetMartialArtsStyleByIdRequest {
+  string id = 1;
+}
+
+message GetMartialArtsStyleByIdResponse {
+  MartialArtsStyle martialArtsStyle = 1;
+}

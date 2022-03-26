@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+option go_package = "github.com/andrewtsun25/djin-proto/proto";
+
+package dev.djin.proto;
+
+message MartialArtsStudio {
+    string id = 1;
+    string name = 2;
+    string logoUrl = 3;
+    string studioUrl = 4;
+    string city = 5;
+}
