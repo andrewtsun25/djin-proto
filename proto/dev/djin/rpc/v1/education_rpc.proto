@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+option go_package = "github.com/andrewtsun25/djin-proto/proto/dev/djin/rpc/v1";
+
+package proto.dev.djin.rpc.v1;
+
+import "proto/dev/djin/entity/v1/education.proto";
+import "proto/dev/djin/entity/v1/education_type.proto";
+
+message ListEducationsByTypeRequest {
+    proto.dev.djin.entity.v1.EducationType education_type = 1;
+}
+
+message ListEducationsByTypeResponse {
+    repeated proto.dev.djin.entity.v1.Education educations = 1;
+}

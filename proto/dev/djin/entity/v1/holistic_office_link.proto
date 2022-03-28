@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+option go_package = "github.com/andrewtsun25/djin-proto/proto/dev/djin/entity/v1";
+
+package proto.dev.djin.entity.v1;
+
+message HolisticOfficeLink {
+    string id = 1;
+    string name = 2;
+    enum HolisticOfficeLinkType {
+        HOLISTIC_OFFICE_LINK_TYPE_UNSPECIFIED = 0;
+        HOLISTIC_OFFICE_LINK_TYPE_DOCUMENTATION = 1;
+        HOLISTIC_OFFICE_LINK_TYPE_CODE = 2;
+    }
+    HolisticOfficeLinkType type = 3;
+    string url = 4;
+}
