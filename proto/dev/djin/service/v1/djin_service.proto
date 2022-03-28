@@ -17,31 +17,31 @@ import "proto/dev/djin/rpc/v1/organization_rpc.proto";
 
 service DjinService {
   // Educations
-  rpc ListEducationsByType(djin.rpc.v1.ListEducationsByTypeRequest)
-      returns (djin.rpc.v1.ListEducationsByTypeResponse) {}
+  rpc ListEducationsByType(proto.dev.djin.rpc.v1.ListEducationsByTypeRequest)
+      returns (proto.dev.djin.rpc.v1.ListEducationsByTypeResponse) {}
   // Employments
-  rpc ListEmployments(djin.rpc.v1.ListEmploymentsRequest)
-      returns (djin.rpc.v1.ListEmploymentsResponse) {}
+  rpc ListEmployments(proto.dev.djin.rpc.v1.ListEmploymentsRequest)
+      returns (proto.dev.djin.rpc.v1.ListEmploymentsResponse) {}
   // HBV Research Papers
-  rpc ListHbvResearchPapers(djin.rpc.v1.ListHbvResearchPapersRequest)
-      returns (djin.rpc.v1.ListHbvResearchPapersResponse) {}
+  rpc ListHbvResearchPapers(proto.dev.djin.rpc.v1.ListHbvResearchPapersRequest)
+      returns (proto.dev.djin.rpc.v1.ListHbvResearchPapersResponse) {}
   // Holistic Office
-  rpc ListHolisticOfficeLinks(djin.rpc.v1.ListHolisticOfficeLinksRequest)
-      returns (djin.rpc.v1.ListHolisticOfficeLinksResponse) {}
-  rpc ListHolisticOfficeModules(djin.rpc.v1.ListHolisticOfficeModulesRequest)
-      returns (djin.rpc.v1.ListHolisticOfficeModulesResponse) {}
+  rpc ListHolisticOfficeLinks(proto.dev.djin.rpc.v1.ListHolisticOfficeLinksRequest)
+      returns (proto.dev.djin.rpc.v1.ListHolisticOfficeLinksResponse) {}
+  rpc ListHolisticOfficeModules(proto.dev.djin.rpc.v1.ListHolisticOfficeModulesRequest)
+      returns (proto.dev.djin.rpc.v1.ListHolisticOfficeModulesResponse) {}
   // Martial Arts
-  rpc GetMartialArtsStyleById(djin.rpc.v1.GetMartialArtsStyleByIdRequest)
-      returns (djin.rpc.v1.GetMartialArtsStyleByIdResponse) {}
+  rpc GetMartialArtsStyleById(proto.dev.djin.rpc.v1.GetMartialArtsStyleByIdRequest)
+      returns (proto.dev.djin.rpc.v1.GetMartialArtsStyleByIdResponse) {}
   // Music
-  rpc ListInstruments(djin.rpc.v1.ListInstrumentsRequest)
-      returns (djin.rpc.v1.ListInstrumentsResponse) {}
-  rpc ListMusicScores(djin.rpc.v1.ListMusicScoresRequest)
-      returns (djin.rpc.v1.ListMusicScoresResponse) {}
+  rpc ListInstruments(proto.dev.djin.rpc.v1.ListInstrumentsRequest)
+      returns (proto.dev.djin.rpc.v1.ListInstrumentsResponse) {}
+  rpc ListMusicScores(proto.dev.djin.rpc.v1.ListMusicScoresRequest)
+      returns (proto.dev.djin.rpc.v1.ListMusicScoresResponse) {}
   // Projects
-  rpc ListProjects(djin.rpc.v1.ListProjectsRequest)
-      returns (djin.rpc.v1.ListProjectsResponse) {}
+  rpc ListProjects(proto.dev.djin.rpc.v1.ListProjectsRequest)
+      returns (proto.dev.djin.rpc.v1.ListProjectsResponse) {}
   // Organizations
-  rpc GetOrganizationById(djin.rpc.v1.GetOrganizationByIdRequest)
-      returns (djin.rpc.v1.GetOrganizationByIdResponse) {}
+  rpc GetOrganizationById(proto.dev.djin.rpc.v1.GetOrganizationByIdRequest)
+      returns (proto.dev.djin.rpc.v1.GetOrganizationByIdResponse) {}
 }
