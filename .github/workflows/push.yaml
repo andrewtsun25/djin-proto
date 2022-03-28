@@ -13,7 +13,7 @@ jobs:
       - uses: bufbuild/buf-breaking-action@v1
         with:
           # Check breaking changes against master
-          against: 'https://github.com/andrewtsun25/djin-proto.git#branch=main,ref=HEAD~1'
+          against: 'https://github.com/andrewtsun25/djin-proto.git#branch=master,ref=HEAD~1'
       - uses: bufbuild/buf-push-action@v1
         with:
           buf_token: ${{ secrets.BUF_TOKEN }}
