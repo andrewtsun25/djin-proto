@@ -1,0 +1,47 @@
+syntax = "proto3";
+
+option go_package = "github.com/andrewtsun25/djin-proto/proto/dev/djin/service/v1";
+
+package dev.djin.service.v1;
+
+import "dev/djin/rpc/v1/education_rpc.proto";
+import "dev/djin/rpc/v1/employment_rpc.proto";
+import "dev/djin/rpc/v1/hbv_research_paper_rpc.proto";
+import "dev/djin/rpc/v1/holistic_office_link_rpc.proto";
+import "dev/djin/rpc/v1/holistic_office_module_rpc.proto";
+import "dev/djin/rpc/v1/instrument_rpc.proto";
+import "dev/djin/rpc/v1/martial_arts_style_rpc.proto";
+import "dev/djin/rpc/v1/music_score_rpc.proto";
+import "dev/djin/rpc/v1/project_rpc.proto";
+import "dev/djin/rpc/v1/organization_rpc.proto";
+
+service DjinService {
+  // Educations
+  rpc ListEducationsByType(dev.djin.rpc.v1.ListEducationsByTypeRequest)
+      returns (dev.djin.rpc.v1.ListEducationsByTypeResponse) {}
+  // Employments
+  rpc ListEmployments(dev.djin.rpc.v1.ListEmploymentsRequest)
+      returns (dev.djin.rpc.v1.ListEmploymentsResponse) {}
+  // HBV Research Papers
+  rpc ListHbvResearchPapers(dev.djin.rpc.v1.ListHbvResearchPapersRequest)
+      returns (dev.djin.rpc.v1.ListHbvResearchPapersResponse) {}
+  // Holistic Office
+  rpc ListHolisticOfficeLinks(dev.djin.rpc.v1.ListHolisticOfficeLinksRequest)
+      returns (dev.djin.rpc.v1.ListHolisticOfficeLinksResponse) {}
+  rpc ListHolisticOfficeModules(dev.djin.rpc.v1.ListHolisticOfficeModulesRequest)
+      returns (dev.djin.rpc.v1.ListHolisticOfficeModulesResponse) {}
+  // Martial Arts
+  rpc GetMartialArtsStyleById(dev.djin.rpc.v1.GetMartialArtsStyleByIdRequest)
+      returns (dev.djin.rpc.v1.GetMartialArtsStyleByIdResponse) {}
+  // Music
+  rpc ListInstruments(dev.djin.rpc.v1.ListInstrumentsRequest)
+      returns (dev.djin.rpc.v1.ListInstrumentsResponse) {}
+  rpc ListMusicScores(dev.djin.rpc.v1.ListMusicScoresRequest)
+      returns (dev.djin.rpc.v1.ListMusicScoresResponse) {}
+  // Projects
+  rpc ListProjects(dev.djin.rpc.v1.ListProjectsRequest)
+      returns (dev.djin.rpc.v1.ListProjectsResponse) {}
+  // Organizations
+  rpc GetOrganizationById(dev.djin.rpc.v1.GetOrganizationByIdRequest)
+      returns (dev.djin.rpc.v1.GetOrganizationByIdResponse) {}
+}

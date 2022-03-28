@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+option go_package = "github.com/andrewtsun25/djin-proto/dev/djin/rpc/v1";
+
+package dev.djin.rpc.v1;
+
+import "dev/djin/entity/v1/project.proto";
+
+message ListProjectsRequest {}
+
+message ListProjectsResponse {
+    repeated dev.djin.entity.v1.Project projects = 1;
+}

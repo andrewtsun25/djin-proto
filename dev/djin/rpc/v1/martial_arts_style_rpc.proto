@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+option go_package = "github.com/andrewtsun25/djin-proto/dev/djin/rpc/v1";
+
+package dev.djin.rpc.v1;
+
+import "dev/djin/entity/v1/martial_arts_style.proto";
+
+message GetMartialArtsStyleByIdRequest {
+    string id = 1;
+}
+
+message GetMartialArtsStyleByIdResponse {
+    dev.djin.entity.v1.MartialArtsStyle martial_arts_style = 1;
+}

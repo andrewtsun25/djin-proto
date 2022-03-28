@@ -1,9 +1,9 @@
 # Protobufs for djin.dev
 
 This Git repository contains gRPC & entity definitions that are to be shared between client and 
-server using a common IDL language called `protobuf`. Server code will be generated in Go, while 
-client code will be generated in TypeScript. Upon committing to this repository, updated stubs for 
-client & server will be auto-generated and published into Buf.
+server of the site [djin.dev](https://djin.dev) using a common IDL language called `protobuf`. Server code will be 
+generated in Go, while client code will be generated in TypeScript. Upon committing to this repository, updated stubs 
+for client & server will be auto-generated and published into Buf.
 
 # Getting Stubs
 
