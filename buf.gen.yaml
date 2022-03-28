@@ -14,7 +14,7 @@ plugins:
     out: generated/ts
     opt: import_style=commonjs,binary
   - name: grpc
-    out: gen/ts
+    out: generated/ts
     opt: grpc_js
     path: grpc_tools_node_protoc_plugin
   - name: ts
