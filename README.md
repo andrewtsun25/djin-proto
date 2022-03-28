@@ -1,36 +1,60 @@
 # Protobufs for djin.dev
 
-This repository contains gRPC & entity definitions that are to be shared between client and server.
-Server code will be generated in Go, while client code will be generated in TypeScript. Upon 
-commiting to this repository, updated stubs for client & server will be generated and published 
-into Google Cloud Artifacts, where they can both be pulled into the server & client repositories 
-respectively. Since this project is multilingual, Bazel has been chosen to maintain dependencies 
-for protobuf code generation. 
+This Git repository contains gRPC & entity definitions that are to be shared between client and 
+server using a common IDL language called `protobuf`. Server code will be generated in Go, while 
+client code will be generated in TypeScript. Upon committing to this repository, updated stubs for 
+client & server will be auto-generated and published into Buf.
 
-Setting up protos to generate Go/TypeScript libraries was done with help from the 
-[`rules-proto-grpc`](https://rules-proto-grpc.com/en/latest/index.html) package and deployment 
-to Google Cloud Artifacts. 
+# Getting Stubs
 
-## Frequently Used Commands
+Protobuf stubs are available in TypeScript/JavaScript on the client side via npm and Go modules 
+on the server side.
 
-### Build server-side Go stubs
-```
-bazel build //:djin_proto_lib_go
-```
+## Client-Side Stubs
 
-### Build client-side TypeScript stubs
-```
-bazel build //:djin_proto_lib_ts
+After setting up your `.npmrc` to use Buf's `npm` registry via
+
+```shell
+npm config set @buf:registry https://npm.buf.build
 ```
 
-### Yarn Usage
-Yarn is used to manage dependencies required to generate TypeScript/JavaScript output. However, 
-rather than invoking yarn directly, 
-[Bazel-managed yarn](https://bazelbuild.github.io/rules_nodejs/dependencies.html) is being used. 
-Yarn will need to be invoked in the following manner:
+Client-side stubs are available in TypeScript from
+```shell
+npm install @buf/grpc_web_andrewtsun25_djin
 ```
-bazel run @yarn//:yarn -- <arguments passed to yarn>
+
+Note: This [feature](https://docs.buf.build/bsr/remote-generation/js) provided by Buf is currently 
+in alpha.
+
+## Server-Side Stubs
+
+Server-side stubs are available in Go from
+```shell
+go get go.buf.build/grpc/go/andrewtsun25/djin
 ```
-Yarn CLI commands can be found [here](https://classic.yarnpkg.com/en/docs/cli/).
+
+Note: This [feature](https://docs.buf.build/bsr/remote-generation/go) provided by Buf is 
+currently in alpha.
+
+# Frequently Used Commands
+
+To use any of these commands, you will need to first 
+[install Buf](https://docs.buf.build/installation) on your computer.
+
+## Linting
+
+```shell
+buf lint
+```
+
+## Check for Breaking Changes
+```shell
+buf breaking
+```
+
+## Code Generation
+```shell
+buf generate
+```
 
 

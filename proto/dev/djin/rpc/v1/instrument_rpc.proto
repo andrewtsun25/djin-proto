@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+option go_package = "github.com/andrewtsun25/djin-proto/proto/dev/djin/rpc/v1";
+
+package proto.dev.djin.rpc.v1;
+
+import "proto/dev/djin/entity/v1/instrument.proto";
+
+message ListInstrumentsRequest {}
+
+message ListInstrumentsResponse {
+  repeated proto.dev.djin.entity.v1.Instrument instruments = 1;
+}

@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+option go_package = "github.com/andrewtsun25/djin-proto/proto/dev/djin/rpc/v1";
+
+package proto.dev.djin.rpc.v1;
+
+import "proto/dev/djin/entity/v1/hbv_research_paper.proto";
+
+message ListHbvResearchPapersRequest {}
+
+message ListHbvResearchPapersResponse {
+    repeated proto.dev.djin.entity.v1.HbvResearchPaper hbv_research_papers = 1;
+}

@@ -1,6 +1,3 @@
-# Bazel
-bazel-*
-
 # JetBrains IDEs
 .idea/
 *.iml
@@ -8,6 +5,5 @@ bazel-*
 # Mac
 .DS_Store
 
-# Yarn (see https://yarnpkg.com/getting-started/qa)
-yarn-error.log
-node_modules
+# Buf
+generated/
