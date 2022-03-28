@@ -4,6 +4,7 @@ option go_package = "github.com/andrewtsun25/djin-proto/proto/dev/djin/service/v
 
 package proto.dev.djin.service.v1;
 
+import "google/api/annotations.proto";
 import "proto/dev/djin/rpc/v1/education_rpc.proto";
 import "proto/dev/djin/rpc/v1/employment_rpc.proto";
 import "proto/dev/djin/rpc/v1/hbv_research_paper_rpc.proto";
@@ -18,30 +19,50 @@ import "proto/dev/djin/rpc/v1/organization_rpc.proto";
 service DjinService {
   // Educations
   rpc ListEducationsByType(proto.dev.djin.rpc.v1.ListEducationsByTypeRequest)
-      returns (proto.dev.djin.rpc.v1.ListEducationsByTypeResponse) {}
+    returns (proto.dev.djin.rpc.v1.ListEducationsByTypeResponse) {
+      option (google.api.http) = { get: "/v1/educations/{education_type}" };
+  }
   // Employments
   rpc ListEmployments(proto.dev.djin.rpc.v1.ListEmploymentsRequest)
-      returns (proto.dev.djin.rpc.v1.ListEmploymentsResponse) {}
+    returns (proto.dev.djin.rpc.v1.ListEmploymentsResponse) {
+      option (google.api.http) = { get: "/v1/employments" };
+  }
   // HBV Research Papers
   rpc ListHbvResearchPapers(proto.dev.djin.rpc.v1.ListHbvResearchPapersRequest)
-      returns (proto.dev.djin.rpc.v1.ListHbvResearchPapersResponse) {}
+    returns (proto.dev.djin.rpc.v1.ListHbvResearchPapersResponse) {
+      option (google.api.http) = { get: "/v1/hbvResearchPapers" };
+  }
   // Holistic Office
   rpc ListHolisticOfficeLinks(proto.dev.djin.rpc.v1.ListHolisticOfficeLinksRequest)
-      returns (proto.dev.djin.rpc.v1.ListHolisticOfficeLinksResponse) {}
+    returns (proto.dev.djin.rpc.v1.ListHolisticOfficeLinksResponse) {
+      option (google.api.http) = { get: "/v1/holisticOfficeLinks" };
+  }
   rpc ListHolisticOfficeModules(proto.dev.djin.rpc.v1.ListHolisticOfficeModulesRequest)
-      returns (proto.dev.djin.rpc.v1.ListHolisticOfficeModulesResponse) {}
+    returns (proto.dev.djin.rpc.v1.ListHolisticOfficeModulesResponse) {
+      option (google.api.http) = { get: "/v1/holisticOfficeModules" };
+  }
   // Martial Arts
   rpc GetMartialArtsStyleById(proto.dev.djin.rpc.v1.GetMartialArtsStyleByIdRequest)
-      returns (proto.dev.djin.rpc.v1.GetMartialArtsStyleByIdResponse) {}
+    returns (proto.dev.djin.rpc.v1.GetMartialArtsStyleByIdResponse) {
+      option (google.api.http) = { get: "/v1/martialArtsStyles/{id}" };
+  }
   // Music
   rpc ListInstruments(proto.dev.djin.rpc.v1.ListInstrumentsRequest)
-      returns (proto.dev.djin.rpc.v1.ListInstrumentsResponse) {}
+    returns (proto.dev.djin.rpc.v1.ListInstrumentsResponse) {
+      option (google.api.http) = { get: "/v1/instruments" };
+  }
   rpc ListMusicScores(proto.dev.djin.rpc.v1.ListMusicScoresRequest)
-      returns (proto.dev.djin.rpc.v1.ListMusicScoresResponse) {}
+    returns (proto.dev.djin.rpc.v1.ListMusicScoresResponse) {
+      option (google.api.http) = { get: "/v1/musicScores" };
+  }
   // Projects
   rpc ListProjects(proto.dev.djin.rpc.v1.ListProjectsRequest)
-      returns (proto.dev.djin.rpc.v1.ListProjectsResponse) {}
+    returns (proto.dev.djin.rpc.v1.ListProjectsResponse) {
+      option (google.api.http) = { get: "/v1/projects" };
+  }
   // Organizations
   rpc GetOrganizationById(proto.dev.djin.rpc.v1.GetOrganizationByIdRequest)
-      returns (proto.dev.djin.rpc.v1.GetOrganizationByIdResponse) {}
+    returns (proto.dev.djin.rpc.v1.GetOrganizationByIdResponse) {
+      option (google.api.http) = { get: "/v1/organizations/{id}" };
+  }
 }
