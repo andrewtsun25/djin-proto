@@ -17,8 +17,8 @@ import "proto/dev/djin/rpc/v1/organization_rpc.proto";
 
 service DjinService {
   // Educations
-  rpc ListEducationsByType(dev.djin.rpc.v1.ListEducationsByTypeRequest)
-      returns (dev.djin.rpc.v1.ListEducationsByTypeResponse) {}
+  rpc ListEducationsByType(proto.dev.djin.rpc.v1.ListEducationsByTypeRequest)
+      returns (proto.dev.djin.rpc.v1.ListEducationsByTypeResponse) {}
   // Employments
   rpc ListEmployments(proto.dev.djin.rpc.v1.ListEmploymentsRequest)
       returns (proto.dev.djin.rpc.v1.ListEmploymentsResponse) {}
