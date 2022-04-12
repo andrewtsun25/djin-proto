@@ -4,10 +4,10 @@ option go_package = "github.com/andrewtsun25/djin-proto/proto/dev/djin/rpc/v1";
 
 package proto.dev.djin.rpc.v1;
 
-import "proto/dev/djin/entity/v1/instrument.proto";
+import "proto/dev/djin/entity/v1/music_instrument.proto";
 
-message ListInstrumentsRequest {}
+message ListMusicInstrumentsRequest {}
 
-message ListInstrumentsResponse {
-  repeated proto.dev.djin.entity.v1.Instrument instruments = 1;
+message ListMusicInstrumentsResponse {
+  repeated proto.dev.djin.entity.v1.MusicInstrument instruments = 1;
 }

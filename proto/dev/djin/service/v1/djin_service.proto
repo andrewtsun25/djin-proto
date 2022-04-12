@@ -47,8 +47,8 @@ service DjinService {
       option (google.api.http) = { get: "/v1/martialArtsStyles/{id}" };
   }
   // Music
-  rpc ListInstruments(proto.dev.djin.rpc.v1.ListInstrumentsRequest)
-    returns (proto.dev.djin.rpc.v1.ListInstrumentsResponse) {
+  rpc ListMusicInstruments(proto.dev.djin.rpc.v1.ListMusicInstrumentsRequest)
+    returns (proto.dev.djin.rpc.v1.ListMusicInstrumentsResponse) {
       option (google.api.http) = { get: "/v1/instruments" };
   }
   rpc ListMusicScores(proto.dev.djin.rpc.v1.ListMusicScoresRequest)
