@@ -9,13 +9,13 @@ import "proto/dev/djin/entity/v1/organization.proto";
 
 message HbvResearchPaper {
   string id = 1;
-  string name = 2;
-  Organization organization = 3;
+  string description = 2;
+  google.protobuf.Timestamp end_date = 3;
   string media_url = 4;
-  google.protobuf.Timestamp start_date = 5;
-  google.protobuf.Timestamp end_date = 6;
+  string name = 5;
+  Organization organization = 6;
   string paper_url = 7;
-  string description = 8;
-  repeated string responsibilities = 9;
-  repeated string skills = 10;
+  repeated string responsibilities = 8;
+  repeated string skills = 9;
+  google.protobuf.Timestamp start_date = 10;
 }
