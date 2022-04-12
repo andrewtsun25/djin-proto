@@ -7,7 +7,8 @@ jobs:
       - uses: actions/checkout@v2
       - uses: bufbuild/buf-setup-action@v1
       - uses: bufbuild/buf-lint-action@v1
-      - uses: bufbuild/buf-breaking-action@v1
-        with:
+      # TODO: restore after commit to master
+      #- uses: bufbuild/buf-breaking-action@v1
+        # with:
         # Check breaking changes against master
-          against: 'https://github.com/andrewtsun25/djin-proto.git#branch=master'
+          # against: 'https://github.com/andrewtsun25/djin-proto.git#branch=master'

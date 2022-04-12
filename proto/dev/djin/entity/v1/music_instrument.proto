@@ -8,4 +8,5 @@ message MusicInstrument {
     string id = 1;
     string media_url = 2;
     string name = 3;
+    string type = 4;
 }
