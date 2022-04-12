@@ -6,6 +6,6 @@ package proto.dev.djin.entity.v1;
 
 message HolisticOfficeModule {
     string id = 1;
-    string name = 2;
     map<string, string> components = 3;
+    string name = 2;
 }

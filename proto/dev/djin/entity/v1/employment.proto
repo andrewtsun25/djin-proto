@@ -9,16 +9,16 @@ import "proto/dev/djin/entity/v1/organization.proto";
 
 message Employment {
     string id = 1;
-    Organization organization = 2;
-    string media_url = 3;
-    string role = 4;
-    google.protobuf.Timestamp start_date = 5;
-    google.protobuf.Timestamp end_date = 6;
-    string description = 7;
-    repeated string responsibilities = 8;
+    string description = 2;
+    repeated string domains = 3;
+    google.protobuf.Timestamp end_date = 4;
+    string media_url = 5;
+    Organization organization = 6;
+    repeated string responsibilities = 7;
+    string role = 8;
     repeated string skills = 9;
     repeated string skill_types = 10;
-    repeated string domains = 11;
+    google.protobuf.Timestamp start_date = 11;
     enum JobType {
         JOB_TYPE_UNSPECIFIED = 0;
         JOB_TYPE_FULL_TIME = 1;

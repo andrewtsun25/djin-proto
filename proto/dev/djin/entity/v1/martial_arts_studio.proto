@@ -8,9 +8,9 @@ import "google/protobuf/timestamp.proto";
 
 message MartialArtsStudio {
     string id = 1;
-    string name = 2;
-    string logo_url = 3;
-    string studio_url = 4;
-    string city = 5;
-    google.protobuf.Timestamp join_date = 6;
+    string city = 2;
+    google.protobuf.Timestamp join_date = 3;
+    string logo_url = 4;
+    string name = 5;
+    string studio_url = 6;
 }
