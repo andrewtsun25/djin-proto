@@ -4,7 +4,8 @@ This Git repository contains [gRPC](https://grpc.io/) & entity definitions that 
 server of the site [djin.dev](https://djin.dev) using a common IDL language called 
 [`protobuf`](https://developers.google.com/protocol-buffers). Server stubs will be generated in [Go](https://go.dev/), 
 while client stubs will be generated in [TypeScript](https://go.dev/). Upon committing to this repository, updated stubs 
-will be auto-generated and published into [Buf](https://buf.build/).
+will be auto-generated and published into [Buf](https://buf.build/). Configurations for managing endpoints on 
+GCP Endpoints are also present in this directory as well. 
 
 # Fetching Stubs
 
@@ -93,6 +94,9 @@ buf generate
 ```
 
 # Deployment to GCP Endpoints
+
+If you change any of the endpoints in `proto/dev/djin/service`, you should also edit the corresponding `api_config.yaml`
+and deploy the changes to GCP Endpoints.
 
 This follows the instructions for [creating](https://cloud.google.com/endpoints/docs/grpc/set-up-cloud-run-espv2#endpoints_configure) 
 and [deploying](https://cloud.google.com/endpoints/docs/grpc/set-up-cloud-run-espv2#deploy_configuration) endpoints, 
