@@ -1,0 +1,43 @@
+# The configuration schema is defined by the service.proto file.
+# https://github.com/googleapis/googleapis/blob/master/google/api/service.proto
+
+type: google.api.Service
+config_version: 3
+name: djin-server-3g4c5nztpq-wl.a.run.app
+title: djin-server gRPC Endpoints
+apis:
+  - name: proto.dev.djin.service.v1.DjinService
+usage:
+  rules:
+    # Educations
+    - selector: proto.dev.djin.service.v1.DjinService.ListEducationsByType
+      allow_unregistered_calls: true
+    # Employments
+    - selector: proto.dev.djin.service.v1.DjinService.ListEmployments
+      allow_unregistered_calls: true
+    # HBV Research Papers
+    - selector: proto.dev.djin.service.v1.DjinService.ListHbvResearchPapers
+      allow_unregistered_calls: true
+    # Holistic Office
+    - selector: proto.dev.djin.service.v1.DjinService.ListHolisticOfficeLinks
+      allow_unregistered_calls: true
+    - selector: proto.dev.djin.service.v1.DjinService.ListHolisticOfficeModules
+      allow_unregistered_calls: true
+    # Martial Arts
+    - selector: proto.dev.djin.service.v1.DjinService.GetMartialArtsStyleById
+      allow_unregistered_calls: true
+    # Music
+    - selector: proto.dev.djin.service.v1.DjinService.ListMusicInstruments
+      allow_unregistered_calls: true
+    - selector: proto.dev.djin.service.v1.DjinService.ListMusicScores
+      allow_unregistered_calls: true
+    # Organizations
+    - selector: proto.dev.djin.service.v1.DjinService.GetOrganizationById
+      allow_unregistered_calls: true
+    # Projects
+    - selector: proto.dev.djin.service.v1.DjinService.ListProjects
+      allow_unregistered_calls: true
+backend:
+  rules:
+    - selector: "*"
+      address: grpcs://djin-server-3g4c5nztpq-wl.a.run.app

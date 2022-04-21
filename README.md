@@ -42,6 +42,28 @@ go get go.buf.build/grpc/go/andrewtsun25/djin
 Note: This [feature](https://docs.buf.build/bsr/remote-generation/go) provided by Buf is 
 currently in alpha.
 
+# Setup
+
+Install the following tools: 
+- [`protoc`](https://grpc.io/docs/protoc-installation/)
+- [gCloud CLI](https://cloud.google.com/sdk/gcloud)
+- [`buf`](https://docs.buf.build/installation)
+
+After [installing the gCloud CLI](https://cloud.google.com/sdk/gcloud), set the default project to `djin-dev`:
+
+```shell
+gcloud config set project djin-dev
+```
+
+Clone the [googleapis](https://github.com/googleapis/googleapis) library somewhere and assign the library root to the 
+`GOOGLEAPIS_DIR` environment variable:
+
+```shell
+git clone https://github.com/googleapis/googleapis
+
+GOOGLEAPIS_DIR=<your-local-googleapis-folder>
+```
+
 # Frequently Used Commands
 
 Prerequisites: [Buf](https://docs.buf.build/installation)
@@ -70,4 +92,28 @@ locally.
 buf generate
 ```
 
+# Deployment to GCP Endpoints
+
+This follows the instructions for [creating](https://cloud.google.com/endpoints/docs/grpc/set-up-cloud-run-espv2#endpoints_configure) 
+and [deploying](https://cloud.google.com/endpoints/docs/grpc/set-up-cloud-run-espv2#deploy_configuration) endpoints, 
+but here are the more specific steps that need to be done per deployment. We can use `deploy_endpoints_config.sh` but
+this has not been officially tested yet. 
+
+With [`protoc`](https://grpc.io/docs/protoc-installation/), generate the API descriptor proto via 
+```shell
+protoc \
+--include_imports \ 
+--include_source_info \
+--proto_path="./" \
+--proto_path=${GOOGLEAPIS_DIR}
+--descriptor_set_out="api_descriptor.pb" \
+`find proto/dev/djin/entity/v1/*.proto` \
+`find proto/dev/djin/rpc/v1/*.proto` \
+`find proto/dev/djin/service/v1/*.proto`
+```
+
+Deploy the API proto descriptor & the api config file via the Google Cloud CLI: 
+```shell
+gcloud endpoints services deploy api_descriptor.pb api_config.yaml
+```
 

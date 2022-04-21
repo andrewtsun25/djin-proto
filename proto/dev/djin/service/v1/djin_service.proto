@@ -49,7 +49,7 @@ service DjinService {
   // Music
   rpc ListMusicInstruments(proto.dev.djin.rpc.v1.ListMusicInstrumentsRequest)
     returns (proto.dev.djin.rpc.v1.ListMusicInstrumentsResponse) {
-      option (google.api.http) = { get: "/v1/instruments" };
+      option (google.api.http) = { get: "/v1/musicInstruments" };
   }
   rpc ListMusicScores(proto.dev.djin.rpc.v1.ListMusicScoresRequest)
     returns (proto.dev.djin.rpc.v1.ListMusicScoresResponse) {
